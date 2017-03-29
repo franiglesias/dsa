@@ -1,0 +1,23 @@
+{
+  "name": "vendor_name/package_name",
+  "description": "description_text",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "author's name",
+      "email": "email@example.com"
+    }
+  ],
+  "require-dev": {
+    "phpspec/phpspec": "3.2.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Dsa\\": "src/Dsa"
+    }
+  },
+  "config": {
+    "bin-path": "bin/"
+  }
+}
