@@ -25,4 +25,9 @@ class SinglyLinkedNode
         $this->value = $value;
         $this->next = null;
     }
+
+    public function nextValueIsNotEqualTo($value)
+    {
+        return $this->next != null && $this->next->value != $value;
+    }
 }

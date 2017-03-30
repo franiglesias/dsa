@@ -5,8 +5,21 @@ namespace Dsa;
 
 class SinglyLinkedList
 {
+    /**
+     * Points to the head of the list
+     * @var SinglyLinkedNode
+     */
     private $head = null;
+    /**
+     * Points to the tail of the list
+     * @var SinglyLinkedNode
+     */
     private $tail = null;
+    /**
+     * Maintains the count for the list
+     * @var int
+     */
+    private $counter = 0;
 
     /**
      * Utility to get the count of items in the list
@@ -14,17 +27,7 @@ class SinglyLinkedList
      */
     public function count()
     {
-        if (!$this->head) {
-            return 0;
-        }
-        $counter = 0;
-        $node = $this->head;
-        while ($node) {
-            $counter++;
-            $node = $node->next;
-        }
-
-        return $counter;
+        return $this->counter;
     }
 
     /**
@@ -60,22 +63,22 @@ class SinglyLinkedList
             } else {
                 $this->head = $this->head->next;
             }
-
+            $this->counter--;
             return true;
         }
-        while ($node->next != null && $node->next->value != $value) {
+        while ($node->nextValueIsNotEqualTo($value)) {
             $node = $node->next;
         }
         if ($node->next == $this->tail) {
             $node->next = false;
             $this->tail = $node;
-
+            $this->counter--;
             return true;
         }
 
         if ($node->next != null) {
             $node->next = $node->next->next;
-
+            $this->counter--;
             return true;
         }
 
@@ -129,6 +132,7 @@ class SinglyLinkedList
     {
         $this->head = null;
         $this->tail = null;
+        $this->counter = 0;
     }
 
     /**
@@ -142,14 +146,13 @@ class SinglyLinkedList
         }
         $node = $this->head;
         $this->head = $this->head->next;
-
+        $this->counter--;
         return $node;
     }
 
     /**
      * @param mixed $value
      *
-     * @return vpid
      */
     public function add($value)
     {
@@ -161,6 +164,7 @@ class SinglyLinkedList
             $this->tail->next = $node;
             $this->tail = $node;
         }
+        $this->counter++;
     }
 
     public function hasValue($value)
