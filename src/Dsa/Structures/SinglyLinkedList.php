@@ -1,6 +1,9 @@
 <?php
 
-namespace Dsa;
+namespace Dsa\Structures;
+
+
+use Dsa\Structures\SinglyLinkedNode;
 
 
 class SinglyLinkedList

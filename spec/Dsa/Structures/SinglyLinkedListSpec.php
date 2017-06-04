@@ -1,8 +1,8 @@
 <?php
 
-namespace spec\Dsa;
+namespace spec\Dsa\Structures;
 
-use Dsa\SinglyLinkedList;
+use Dsa\Structures\SinglyLinkedList;
 use PhpSpec\ObjectBehavior;
 
 

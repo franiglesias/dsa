@@ -1,12 +1,12 @@
 {
-  "name": "vendor_name/package_name",
-  "description": "description_text",
+  "name": "milhojas/dsa",
+  "description": "Exercises on Data Structures and Algorithms",
   "minimum-stability": "stable",
   "license": "proprietary",
   "authors": [
     {
-      "name": "author's name",
-      "email": "email@example.com"
+      "name": "Fran Iglesias",
+      "email": "franiglesias@mac.com"
     }
   ],
   "require-dev": {

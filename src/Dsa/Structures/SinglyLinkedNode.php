@@ -6,7 +6,7 @@
  * Time: 16:17
  */
 
-namespace Dsa;
+namespace Dsa\Structures;
 
 
 class SinglyLinkedNode
